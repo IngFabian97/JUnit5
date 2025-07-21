@@ -1,0 +1,36 @@
+# Archivos de compilación
+/bin/
+/build/
+/out/
+
+# Dependencias descargadas por herramientas de construcción
+/.gradle/
+/target/
+/.idea/
+/*.iml
+
+# Archivos de configuración de Eclipse
+*.classpath
+*.project
+*.settings/
+
+# Archivos de configuración de VS Code
+.vscode/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de logs
+*.log
+
+# Archivos de pruebas
+/test-output/
+
+# Librerías externas
+/lib/
+
+# Otros
+*.jar
+*.war
+*.ear
