@@ -30,6 +30,13 @@ Thumbs.db
 # Librerías externas
 /lib/
 
+# Reportes de Allure
+/allure-report/
+/allure-report/*
+/target/allure-results/
+/target/allure-report/
+/target/allure-report/*
+
 # Otros
 *.jar
 *.war
