@@ -10,6 +10,9 @@ import org.junit.jupiter.api.Test;
 import com.junit.modelos.Monstruo;
 import com.junit.reader.ExcelReader;
 
+import annotations.Regression;
+import annotations.Smoke;
+
 public class ExcelMonstruoTests {
     private List<Monstruo> listaMonstruo;
 
@@ -20,18 +23,24 @@ public class ExcelMonstruoTests {
     }
 
     @Test
+    @Regression
+    @Smoke
     public void primerTest() {
         final var primerMonstruo = listaMonstruo.get(0);
         Assertions.assertEquals(primerMonstruo.getNombre(), "TOLOSA", "El nombre del primer monstruo no es el esperado");
     }
 
     @Test
+    @Regression
+    @Smoke
     public void segundoTest() {
         final var n = listaMonstruo.size();
         Assertions.assertEquals(n, 14, "El numero de monstruos debe ser 14");
     }
 
     @Test
+    @Regression
+    @Smoke
     public void tercerTest() {
         final var tercerMonstruo = listaMonstruo.get(2);
         Assertions.assertEquals(tercerMonstruo.getNivel(), 22, "El nivel del tercer monstruo no es el esperado");
@@ -39,6 +48,8 @@ public class ExcelMonstruoTests {
     }
 
     @Test
+    @Regression
+    @Smoke
     public void cuartoTest() {
         final var ultimoMonstruo = listaMonstruo.get(listaMonstruo.size() - 1);
         Assertions.assertAll(

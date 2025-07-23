@@ -7,6 +7,8 @@ import org.junit.jupiter.api.Test;
 import com.junit.modelos.User;
 import com.junit.reader.JsonReader;
 
+import annotations.Regression;
+import annotations.Smoke;
 import utilities.BaseTest;
 
 public class JsonUserTests extends BaseTest{
@@ -18,11 +20,15 @@ public class JsonUserTests extends BaseTest{
     }
 
     @Test
+    @Regression
+    @Smoke
     public void primerTest() {
         Assertions.assertTrue(user.getId() > 0, "El ID del usuario debe ser mayor que cero");
     }
 
     @Test
+    @Regression
+    @Smoke
     public void segundoTest() {
         Assertions.assertEquals(user.getAddress().getGeo().getLng(), 71.7478, "El valor de lng no es el esperado");
     }
@@ -34,6 +40,8 @@ public class JsonUserTests extends BaseTest{
     }
 
     @Test
+    @Regression
+    @Smoke
     public void cuartoTest() {
         Assertions.assertAll(
             () -> Assertions.assertEquals(user.getName(), "Mrs. Dennis Schulist", "El nombre del usuario no es el esperado"),
